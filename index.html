@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento de Pedido - PagBrasil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="status_style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">PagBrasil</div>
+            <div class="order-info">
+                <h1>Status do Pedido #84920</h1>
+                <p>Previsão de entrega: <strong>12 de Janeiro, 2026</strong></p>
+            </div>
+        </header>
+
+        <main class="status-card">
+            <div class="tracking-container">
+                <div class="tracking-line">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                
+                <div class="step active" data-status="processing">
+                    <div class="step-icon">⚙️</div>
+                    <div class="step-text">
+                        <h3>Em processamento</h3>
+                        <p>06 Jan, 09:30</p>
+                    </div>
+                </div>
+
+                <div class="step active" data-status="collected">
+                    <div class="step-icon">📦</div>
+                    <div class="step-text">
+                        <h3>Coletado pela Transportadora</h3>
+                        <p>06 Jan, 14:15</p>
+                    </div>
+                </div>
+
+                <div class="step" data-status="transit">
+                    <div class="step-icon">🚚</div>
+                    <div class="step-text">
+                        <h3>Em Trânsito</h3>
+                        <p>Aguardando atualização</p>
+                    </div>
+                </div>
+
+                <div class="step" data-status="shipped">
+                    <div class="step-icon">✈️</div>
+                    <div class="step-text">
+                        <h3>Enviado</h3>
+                        <p>Aguardando atualização</p>
+                    </div>
+                </div>
+
+                <div class="step" data-status="delivered">
+                    <div class="step-icon">🏠</div>
+                    <div class="step-text">
+                        <h3>Entregue</h3>
+                        <p>Aguardando atualização</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-details">
+                <h2>Detalhes do Envio</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="label">Transportadora</span>
+                        <span class="value">Loggi Express</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Código de Rastreio</span>
+                        <span class="value">BR928374655LG</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Endereço de Entrega</span>
+                        <span class="value">Av. Paulista, 1000 - São Paulo, SP</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Precisa de ajuda? <a href="#">Entre em contato com o suporte</a></p>
+        </footer>
+    </div>
+
+    <script src="status_script.js"></script>
+</body>
+</html>
