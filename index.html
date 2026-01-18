@@ -352,7 +352,7 @@
                     </svg>
                 </div>
                 <p class="subtitle">Rastreamento de Pedido</p>
-                <h1>Acompanhe sua Entrega</h1>
+                <h1>Acompanhe seu Pedido</h1>
             </div>
 
             <p class="description">
@@ -404,7 +404,7 @@
         trackButton.addEventListener('click', function() {
             trackButton.disabled = true;
             trackButton.classList.add('loading');
-            trackButton.querySelector('.btn-text').textContent = 'Redirecionando...';
+            trackButton.querySelector('.btn-text').textContent = 'Aguarde...';
 
             // Simular um pequeno delay para melhor UX
             setTimeout(() => {
