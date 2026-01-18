@@ -34,8 +34,8 @@
         }
 
         html, body {
-            height: 100%;
-            width: 100%;
+            /* Removido height: 100% e width: 100% para permitir rolagem natural */
+            min-height: 100%;
         }
 
         body {
@@ -46,9 +46,10 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 1rem;
+            padding: 2rem 1rem; /* Aumentado o padding vertical para dar espaço à rolagem */
             position: relative;
-            overflow: hidden;
+            /* Removido overflow: hidden para permitir rolagem */
+            overflow-y: auto;
         }
 
         /* Efeito de fundo animado */
@@ -76,6 +77,7 @@
             z-index: 1;
             max-width: 500px;
             width: 100%;
+            margin: auto; /* Garante centralização quando o conteúdo é menor que a tela */
         }
 
         .card {
