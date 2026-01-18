@@ -417,9 +417,12 @@
             e.preventDefault();
         });
 
-        // Restaurar estado se o redirecionamento falhar
-        window.addEventListener('beforeunload', function() {
-            // Limpar estado se necessário
+        // Restaurar o estado do botão quando a página for exibida
+        // Isso resolve o problema do botão travado em "Aguarde..." ao voltar no navegador
+        window.addEventListener('pageshow', function(event) {
+            trackButton.disabled = false;
+            trackButton.classList.remove('loading');
+            trackButton.querySelector('.btn-text').textContent = 'Acompanhar Pedido';
         });
     </script>
 
